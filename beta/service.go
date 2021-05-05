@@ -1,15 +1,9 @@
 package beta
 
 import (
-	"dig-playground/inject"
 	"dig-playground/interfaces"
-	"go.uber.org/dig"
 	"log"
 )
-
-func init() {
-	_ = inject.Container.Provide(NewService, dig.Name("beta"))
-}
 
 type Service struct {
 	alphaSvc interfaces.AlphaService
